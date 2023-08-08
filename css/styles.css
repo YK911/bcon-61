@@ -1,0 +1,148 @@
+/* Variables */
+:root {
+  /* Fonts */
+  --main-font: 'Montserrat', sans-serif;
+  --secondary-font: sans-serif;
+  /* Colors */
+  --main-cl: #111111;
+  --primary-cl: ;
+  --secondary-cl: ;
+  --accent-cl: #fd9222;
+  --light-cl: #fff;
+  --light-cl-70: rgba(255, 255, 255, 0.7);
+  --dakr-cl: ;
+  --info-cl: ;
+  --warning-cl: ;
+  --error-cl: ;
+
+  /* Background colors */
+  --main-bg-cl: rgba(17, 17, 17, 0.7);
+  --primary-bg-cl: #1e1823;
+  --secondary-bg-cl: ;
+  --light-bg-cl: ;
+  --dakr-bg-cl: ;
+
+  /* Other */
+  --radius: ;
+  --shadow: ;
+}
+/**
+  |============================
+  | Base styles
+  |============================
+*/
+.page {
+  font-family: var(--main-font);
+  color: var(--main-cl);
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+.btn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--light-cl);
+  background-color: transparent;
+}
+.main-btn {
+  background-color: var(--accent-cl);
+}
+.btn-primary {
+}
+.btn-secondary {
+  font-size: 18px;
+  color: var(--main-cl);
+}
+
+/**
+  |============================
+  | Header styles
+  |============================
+*/
+.header {
+}
+.header-nav {
+}
+.header-logo {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+}
+.header-logo-italic {
+  font-style: italic;
+}
+.header-logo-icon {
+}
+.header-list {
+}
+.header-list-item {
+}
+.header-list-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.header-socials {
+}
+.header-socials-item {
+}
+.header-socials-link {
+}
+.header-socials-icon {
+}
+/**
+  |============================
+  | Hero styles
+  |============================
+*/
+.hero {
+  background-color: var(--main-bg-cl);
+}
+.hero-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: var(--light-cl);
+}
+/**
+  |============================
+  | Benefits styles
+  |============================
+*/
+.benefits {
+  background-color: var(--primary-bg-cl);
+}
+.benefits-list {
+}
+.benefits-list-item {
+}
+.benefits-list-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--light-cl);
+}
+.benefits-list-desc {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--light-cl-70);
+}
+/**
+  |============================
+  | Ingridients styles
+  |============================
+*/
+/**
+  |============================
+  | Made styles
+  |============================
+*/
