@@ -1,5 +1,8 @@
 /* Variables */
 :root {
+  /* Плавна прокрутка для якірних посилань */
+  scroll-behavior: smooth;
+
   /* Fonts */
   --main-font: 'Montserrat', sans-serif;
   --secondary-font: sans-serif;
@@ -24,6 +27,8 @@
   /* Other */
   --radius: ;
   --shadow: ;
+  --anim-fast: 300ms ease;
+  --anim-slow: 800ms ease-in-out;
 
   --indent-vertical: 32px;
   --indent-horizontal: var(--indent-vertical);
@@ -68,6 +73,9 @@ svg {
   display: block;
   max-width: 100%;
   height: auto;
+}
+button {
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -122,6 +130,9 @@ svg {
   border: 1px solid transparent;
   border-radius: 100px;
   cursor: pointer;
+
+  transition: background-color var(--anim-fast), color var(--anim-fast),
+    border-color var(--anim-fast);
 }
 .btn-accent {
   background-color: var(--accent-cl);
@@ -197,6 +208,21 @@ svg {
   font-style: italic;
 }
 .header-logo-icon {
+  animation: infinity-rotate 3000ms linear 0s infinite;
+  /* transition: transform 5000ms linear; */
+}
+.header-logo:hover .header-logo-icon,
+.header-logo:focus .header-logo-icon {
+  /* transform: rotate(360deg); */
+}
+
+@keyframes infinity-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .header-list {
   display: flex;
@@ -205,6 +231,7 @@ svg {
 .header-list-item {
 }
 .header-list-link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -212,6 +239,7 @@ svg {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  transition: color var(--anim-fast);
 }
 .header-list-link:hover,
 .header-list-link:focus {
@@ -219,10 +247,17 @@ svg {
 }
 .header-list-link::after {
   content: '';
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 4px;
+  background-color: transparent;
+}
+.header-list-link.current::after {
   background-color: var(--accent-cl);
 }
 .header-socials {
@@ -239,6 +274,8 @@ svg {
   border-radius: 10px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   color: var(--main-cl);
+
+  transition: color var(--anim-fast);
 }
 .header-socials-link:hover,
 .header-socials-link:focus {
@@ -339,23 +376,22 @@ svg {
   justify-content: space-between;
 }
 .benefits-list-item {
+  position: relative;
   width: 308px;
 }
-/* .benefits-list-item::before {
+.benefits-list-item:not(:last-child)::after {
   content: '';
-  display: block;
-  width: 62px;
-  height: 62px;
-  margin-bottom: 22px;
+  position: absolute;
+  top: 50%;
+  right: -44px;
+  transform: translateY(-50%);
 
-  background-image: url('../images/icons/icons.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-/* .benefits-list-item:not(:last-child) {
-  margin-right: 88px;
-} */
+  display: block;
+  width: 1px;
+  height: 124px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .benefits-list-wrapper {
   display: flex;
   align-items: center;
@@ -400,6 +436,7 @@ svg {
 .ingridients-list {
 }
 .ingridients-item {
+  position: relative;
   padding: 28px 23px;
 
   background-color: var(--light-cl);
@@ -417,9 +454,17 @@ svg {
 .ingridients-item:nth-child(2n) {
   border-color: var(--accent-cl);
 }
+.ingridients-item-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
 .ingridients-item-icon {
   fill: none;
-  margin-left: auto;
 }
 .ingridients-item:nth-child(4n + 1) .ingridients-item-icon,
 .ingridients-item:nth-child(4n + 3) .ingridients-item-icon {
@@ -452,7 +497,23 @@ svg {
   display: flex;
   gap: 20px;
 }
+.made-left-side {
+  position: relative;
+  flex-shrink: 0;
+}
 .made-pic {
+}
+.made-btn {
+  position: absolute;
+  top: calc(50%);
+  left: calc(50%);
+  transform: translateX(-50%) translateY(-50%);
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.made-btn-icon {
 }
 .made-right-side {
   padding: 32px;
@@ -559,10 +620,47 @@ svg {
 }
 .bestsellers-item {
 }
-.bestsellers-img {
+.bestsellers-box {
+  position: relative;
   border-radius: 15px 15px 0px 0px;
+  overflow: hidden;
 }
-.bestsellers-wraper {
+.bestsellers-img {
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: linear-gradient(161deg, rgba(253, 253, 255, 0.1), rgba(8, 2, 21, 0));
+  backdrop-filter: blur(0px);
+
+  transition-property: transform, backdrop-filter;
+  transition-duration: 500ms, 300ms;
+  transition-timing-function: ease;
+  transition-delay: 800ms, 0s;
+}
+.bestsellers-item:hover .overlay {
+  transform: translateY(0);
+  backdrop-filter: blur(8px);
+  transition-delay: 0s, 500ms;
+}
+.overlay-text {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--main-bg-cl);
+}
+.bestsellers-wrapper {
   padding: 28px;
 
   border-radius: 0 0 15px 15px;
@@ -595,18 +693,24 @@ svg {
   margin-bottom: 50px;
 }
 .reviews-item {
+  position: relative;
+
   padding: 24px;
+  padding-top: 56px;
   background-color: var(--light-cl);
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   box-shadow: 0px 9px 100px 0px rgba(17, 17, 17, 0.03);
 }
 .reviews-avatar {
-  margin: 0 auto;
-  margin-top: -66px;
+  /* margin: 0 auto;
+  margin-top: -66px; */
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .reviews-author {
-  margin-top: 18px;
   margin-bottom: 24px;
   font-weight: 600;
   font-size: 18px;
@@ -730,4 +834,49 @@ svg {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-cl);
+}
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  transition: opacity var(--anim-slow), visibility var(--anim-slow);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 517px;
+  min-height: 794px;
+  background-color: var(--main-bg-cl);
+  border-radius: 15px;
+
+  padding: 40px;
+}
+.modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.modal-btn-icon {
 }
