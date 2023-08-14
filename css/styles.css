@@ -209,13 +209,8 @@ button {
 }
 .header-logo-icon {
   animation: infinity-rotate 3000ms linear 0s infinite;
-  /* transition: transform 5000ms linear; */
 }
-.header-logo:hover .header-logo-icon,
-.header-logo:focus .header-logo-icon {
-  /* transform: rotate(360deg); */
-}
-
+/* Анімація іконки логотипа */
 @keyframes infinity-rotate {
   from {
     transform: rotate(0);
@@ -793,6 +788,7 @@ button {
   line-height: 1.14;
   letter-spacing: -0.02em;
   color: var(--light-cl);
+  transition: color var(--anim-fast);
 }
 .footer-menu-link:hover,
 .footer-menu-link:focus {
@@ -805,13 +801,11 @@ button {
 }
 .socials-link {
 }
-/* .socials-link:hover,
-.socials-link:focus {
-  color: var(--accent-cl);
-} */
+
 .socials-icon {
   fill: none;
   stroke: var(--light-cl);
+  transition: stroke var(--anim-fast);
 }
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
@@ -830,6 +824,7 @@ button {
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--light-cl);
+  transition: color var(--anim-fast);
 }
 .contacts-link:hover,
 .contacts-link:focus {
