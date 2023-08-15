@@ -636,16 +636,88 @@
       </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="modal-btn" data-modal-close>
+        <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="28" height="28">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <strong class="modal-caption">
+          LEAVE A REVIEW ABOUT <span class="modal-caption-accent">OUR CHOCOLATE</span>
+        </strong>
+        <form class="modal-form" name="review_form">
+          <label class="modal-label" for="user_name">Name</label>
+
+          <div class="modal-field">
+            <input class="modal-field-input" type="text" name="user_name" id="user_name" />
+            <svg class="modal-field-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-user"></use>
+            </svg>
+          </div>
+
+          <label class="modal-label" for="user_email">Email</label>
+
+          <div class="modal-field">
+            <input class="modal-field-input" type="text" name="user_email" id="user_email" />
+            <svg class="modal-field-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-email"></use>
+            </svg>
+          </div>
+
+          <label class="modal-label" for="user_phone">Phone number</label>
+
+          <div class="modal-field">
+            <input class="modal-field-input" type="text" name="user_phone" id="user_phone" />
+            <svg class="modal-field-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </div>
+
+          <label class="modal-label" for="user_comment">Comment</label>
+          <textarea
+            class="modal-field-review"
+            name="user_comment"
+            id="user_comment"
+            rows="4"
+            placeholder="Enter text"
+          ></textarea>
+
+          <label class="modal-agreement">
+            <input class="visually-hidden" type="checkbox" name="" id="" />
+            <!-- Ver.2 -->
+            <!-- <svg class="modal-checkbox-icon" width="20" height="20">
+              <use class="unchecked" href="./images/sprite.svg#icon-unchecked"></use>
+              <use class="checked" href="./images/sprite.svg#icon-checked"></use>
+            </svg> -->
+            <!-- Ver.3 -->
+            <span class="custom-checkbox">
+              <svg class="custom-checkbox-icon" width="10" height="10">
+                <use href="./images/sprite.svg#icon-check-mark"></use>
+              </svg>
+            </span>
+
+            <span class="modal-agreement-desc">
+              I accept the terms and conditions of the
+              <a class="modal-agreement-link" href="#" target="_blank" rel="noopener noreferrer">
+                Privacy Policy
+              </a>
+            </span>
+          </label>
+
+          <button class="btn btn-accent" type="submit">Send</button>
+        </form>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <!-- <script src="./js/form.js"></script> -->
   </body>
 </html>
+
+<!-- <div role="group" aria-labelledby="notifications">
+            <p id="notifications">Legend</p>
+            <label for="">
+              <input type="text">
+            </label>
+          </div> -->
