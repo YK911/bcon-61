@@ -622,21 +622,32 @@
             </div>
           </address>
         </div>
-        <ul class="footer-menu list">
-          <li class="footer-menu-item">
-            <a class="footer-menu-link link" href="#home">Home</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link link" href="#made">How it’s made?</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link link" href="#reviews">Chocolate is loved</a>
-          </li>
-        </ul>
+        <div class="footer-bottom">
+          <ul class="footer-menu list">
+            <li class="footer-menu-item">
+              <a class="footer-menu-link link" href="#home">Home</a>
+            </li>
+            <li class="footer-menu-item">
+              <a class="footer-menu-link link" href="#made">How it’s made?</a>
+            </li>
+            <li class="footer-menu-item">
+              <a class="footer-menu-link link" href="#reviews">Chocolate is loved</a>
+            </li>
+          </ul>
+          <form class="subscribe-form">
+            <input
+              class="subscribe-form-input"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button class="btn btn-accent" type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="28" height="28">
@@ -650,16 +661,36 @@
           <label class="modal-label" for="user_name">Name</label>
 
           <div class="modal-field">
-            <input class="modal-field-input" type="text" name="user_name" id="user_name" />
+            <input
+              class="modal-field-input"
+              type="text"
+              name="user_name"
+              id="user_name"
+              required
+              minlength="3"
+              placeholder="Jacob Mercer"
+            />
             <svg class="modal-field-icon" width="24" height="24">
               <use href="./images/sprite.svg#icon-user"></use>
             </svg>
+            <svg class="modal-field-info" width="24" height="24">
+              <use class="error" href="./images/sprite.svg#icon-error"></use>
+              <use class="success" href="./images/sprite.svg#icon-success"></use>
+            </svg>
+            <span class="modal-error-message">Enter minimum 3 symbols</span>
           </div>
 
           <label class="modal-label" for="user_email">Email</label>
 
           <div class="modal-field">
-            <input class="modal-field-input" type="text" name="user_email" id="user_email" />
+            <input
+              class="modal-field-input"
+              type="email"
+              name="user_email"
+              id="user_email"
+              required
+              placeholder="example@mail.com"
+            />
             <svg class="modal-field-icon" width="24" height="24">
               <use href="./images/sprite.svg#icon-email"></use>
             </svg>
@@ -668,7 +699,13 @@
           <label class="modal-label" for="user_phone">Phone number</label>
 
           <div class="modal-field">
-            <input class="modal-field-input" type="text" name="user_phone" id="user_phone" />
+            <input
+              class="modal-field-input"
+              type="tel"
+              name="user_phone"
+              id="user_phone"
+              required
+            />
             <svg class="modal-field-icon" width="24" height="24">
               <use href="./images/sprite.svg#icon-phone"></use>
             </svg>
@@ -681,10 +718,12 @@
             id="user_comment"
             rows="4"
             placeholder="Enter text"
+            required
+            minlength="3"
           ></textarea>
 
           <label class="modal-agreement">
-            <input class="visually-hidden" type="checkbox" name="" id="" />
+            <input class="visually-hidden" type="checkbox" name="user_argeement" />
             <!-- Ver.2 -->
             <!-- <svg class="modal-checkbox-icon" width="20" height="20">
               <use class="unchecked" href="./images/sprite.svg#icon-unchecked"></use>
@@ -705,19 +744,16 @@
             </span>
           </label>
 
-          <button class="btn btn-accent" type="submit">Send</button>
+          <button class="modal-submit-btn btn btn-accent" type="submit">Send</button>
         </form>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
     <!-- <script src="./js/form.js"></script> -->
+    <!-- Mask for inputs -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js"></script>
+    <script src="./js/input-mask.js"></script>
   </body>
 </html>
-
-<!-- <div role="group" aria-labelledby="notifications">
-            <p id="notifications">Legend</p>
-            <label for="">
-              <input type="text">
-            </label>
-          </div> -->
