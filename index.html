@@ -88,12 +88,21 @@
             </a>
           </li>
         </ul>
+        <button
+          class="header-menu-btn menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="" width="28" height="28">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Main content -->
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container">
           <div class="hero-wrapper">
             <h1 class="hero-title">
@@ -113,7 +122,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Benefits section -->
       <section class="benefits section">
         <div class="benefits-container container">
@@ -279,7 +288,7 @@
         </div>
       </section>
       <!-- Made section -->
-      <section class="made section" id="made">
+      <!-- <section class="made section" id="made">
         <div class="container">
           <h2 class="made-title section-title">
             How it’s <span class="section-title-accent">made</span>?
@@ -318,7 +327,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- Products section -->
       <section class="products section">
         <div class="container">
@@ -426,7 +435,7 @@
         </div>
       </section>
       <!-- Bestsellers section -->
-      <section class="bestsellers section">
+      <!-- <section class="bestsellers section">
         <div class="container">
           <h2 class="bestsellers-title section-title">
             <span class="section-title-accent">Top</span> sellers
@@ -497,9 +506,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Reviews section -->
-      <section class="reviews section" id="reviews">
+      <!-- <section class="reviews section" id="reviews">
         <div class="container">
           <h2 class="reviews-title section-title">
             <span class="section-title-accent">Chocolate</span> is loved
@@ -552,10 +561,10 @@
             >Leave a review</button
           >
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -645,7 +654,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -748,12 +757,83 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-toggle-icon" width="28" height="28">
+          <use href="./images/sprite.svg#icon-menu-close"></use>
+        </svg>
+      </button>
 
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">How it’s made?</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Chocolate is loved</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-socials socials list">
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook link"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#facebook-hdr"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram link"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#instagram-hdr"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter link"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#twitter-hdr"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ==SCRIPTS== -->
     <script src="./js/modal.js"></script>
     <!-- <script src="./js/form.js"></script> -->
     <!-- Mask for inputs -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js"></script>
     <script src="./js/input-mask.js"></script>
+    <!-- Mobile menu -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
