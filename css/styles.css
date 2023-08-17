@@ -237,6 +237,11 @@ button {
   line-height: 1.28;
   letter-spacing: -0.03em;
 }
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 47px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .header-logo {
     margin-right: 365px;
@@ -262,11 +267,16 @@ button {
 }
 .header-list {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 @media only screen and (max-width: 767.98px) {
   .header-list {
     display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header-list {
+    gap: 24px;
   }
 }
 .header-list-item {
@@ -340,8 +350,8 @@ button {
   padding-bottom: 80px;
 }
 .hero-wrapper {
-  padding: 40px;
-  padding-top: 381px;
+  padding: 20px;
+  padding-top: 395px;
 
   border-radius: 30px;
   background-color: var(--light-bg-cl);
@@ -351,8 +361,18 @@ button {
   background-position: center;
   background-size: cover;
 }
+@media only screen and (min-width: 768px) {
+  .hero-wrapper {
+    padding: 40px;
+    padding-top: 671px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero-wrapper {
+    padding-top: 381px;
+  }
+}
 .hero-title {
-  width: 484px;
   margin-bottom: 32px;
 
   font-weight: 500;
@@ -360,6 +380,11 @@ button {
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: var(--light-cl);
+}
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    width: 484px;
+  }
 }
 .hero-controls {
   display: flex;
