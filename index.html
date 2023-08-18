@@ -187,6 +187,7 @@
               </button>
               <img
                 class="ingridients-img"
+                srcset="./images/ingridients/img-1.png 1x, ./images/ingridients/img-1@2x.png 2x"
                 src="./images/ingridients/img-1.png"
                 alt="Milk chocolate pieces"
                 width="214"
@@ -202,6 +203,7 @@
               </button>
               <img
                 class="ingridients-img"
+                srcset="./images/ingridients/img-2.png 1x, ./images/ingridients/img-2@2x.png 2x"
                 src="./images/ingridients/img-2.png"
                 alt="Milk in bottle"
                 width="214"
@@ -217,6 +219,7 @@
               </button>
               <img
                 class="ingridients-img"
+                srcset="./images/ingridients/img-3.png 1x, ./images/ingridients/img-3@2x.png 2x"
                 src="./images/ingridients/img-3.png"
                 alt="Nuts"
                 width="214"
@@ -232,6 +235,7 @@
               </button>
               <img
                 class="ingridients-img"
+                srcset="./images/ingridients/img-4.png 1x, ./images/ingridients/img-4@2x.png 2x"
                 src="./images/ingridients/img-4.png"
                 alt="Semi-sweet chocolate drops"
                 width="214"
@@ -247,6 +251,7 @@
               </button>
               <img
                 class="ingridients-img"
+                srcset="./images/ingridients/img-5.png 1x, ./images/ingridients/img-5@2x.png 2x"
                 src="./images/ingridients/img-5.png"
                 alt="Cacao beans"
                 width="214"
@@ -262,6 +267,7 @@
               </button>
               <img
                 class="ingridients-img"
+                srcset="./images/ingridients/img-6.png 1x, ./images/ingridients/img-6@2x.png 2x"
                 src="./images/ingridients/img-6.png"
                 alt="Fresh raspberry"
                 width="214"
@@ -277,6 +283,7 @@
               </button>
               <img
                 class="ingridients-img"
+                srcset="./images/ingridients/img-7.png 1x, ./images/ingridients/img-7@2x.png 2x"
                 src="./images/ingridients/img-7.png"
                 alt="Coconut oil"
                 width="214"
@@ -288,14 +295,28 @@
         </div>
       </section>
       <!-- Made section -->
-      <!-- <section class="made section" id="made">
+      <section class="made section" id="made">
         <div class="container">
           <h2 class="made-title section-title">
             How it’s <span class="section-title-accent">made</span>?
           </h2>
           <div class="made-wrapper">
             <div class="made-left-side">
-              <img class="made-pic" src="./images/made/img.jpg" alt="" width="600" height="400" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/made/image_desk.jpg 1x, ./images/made/image_desk@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/made/image_tab.jpg 1x, ./images/made/image_tab@2x.jpg 2x"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/made/image_mob.jpg 1x, ./images/made/image_mob@2x.jpg 2x"
+                />
+                <img class="made-pic" src="./images/made/img.jpg" alt="" width="614" height="400" />
+              </picture>
               <button class="made-btn" type="button">
                 <svg class="made-btn-icon" width="44" height="44">
                   <use href="./images/sprite.svg#play"></use>
@@ -327,7 +348,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Products section -->
       <section class="products section">
         <div class="container">
@@ -338,7 +359,8 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
-                src="./images/products/img-1.jpg"
+                srcset="./images/products/img-1.jpg 1x, ./images/products/img-1@2x.jpg 2x"
+                src="./images/products/img-1_mob.png"
                 alt="Dark chocolate with orange"
                 width="230"
                 height="201"
@@ -350,6 +372,7 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
+                srcset="./images/products/img-2.jpg 1x, ./images/products/img-2@2x.jpg 2x"
                 src="./images/products/img-2.jpg"
                 alt="Milk chocolate with Apple and Cranberry"
                 width="230"
@@ -362,6 +385,7 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
+                srcset="./images/products/img-3.jpg 1x, ./images/products/img-3@2x.jpg 2x"
                 src="./images/products/img-3.jpg"
                 alt="Dark chocolate with Limeand Sea salt"
                 width="230"
@@ -374,6 +398,7 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
+                srcset="./images/products/img-4.jpg 1x, ./images/products/img-4@2x.jpg 2x"
                 src="./images/products/img-4.jpg"
                 alt="Dark chocolate with Pineapple"
                 width="230"
@@ -386,6 +411,7 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
+                srcset="./images/products/img-5.jpg 1x, ./images/products/img-5@2x.jpg 2x"
                 src="./images/products/img-5.jpg"
                 alt="Classic Milk chocolate"
                 width="230"
@@ -398,6 +424,7 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
+                srcset="./images/products/img-6.jpg 1x, ./images/products/img-6@2x.jpg 2x"
                 src="./images/products/img-6.jpg"
                 alt="Milk chocolate with Honey"
                 width="230"
@@ -410,6 +437,7 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
+                srcset="./images/products/img-7.jpg 1x, ./images/products/img-7@2x.jpg 2x"
                 src="./images/products/img-7.jpg"
                 alt="Dark chocolate with Roasted fruits"
                 width="230"
@@ -422,6 +450,7 @@
             <li class="products-item card-set-item">
               <img
                 class="products-ill"
+                srcset="./images/products/img-8.jpg 1x, ./images/products/img-8@2x.jpg 2x"
                 src="./images/products/img-8.jpg"
                 alt="Classic White chocolate"
                 width="230"
@@ -435,7 +464,7 @@
         </div>
       </section>
       <!-- Bestsellers section -->
-      <!-- <section class="bestsellers section">
+      <section class="bestsellers section">
         <div class="container">
           <h2 class="bestsellers-title section-title">
             <span class="section-title-accent">Top</span> sellers
@@ -445,6 +474,7 @@
               <div class="bestsellers-box">
                 <img
                   class="bestsellers-img"
+                  srcset="./images/bestsellers/img-1.jpg 1x, ./images/bestsellers/img-1@2x.jpg 2x"
                   src="./images/bestsellers/img-1.jpg"
                   alt=""
                   width="368"
@@ -466,6 +496,7 @@
               <div class="bestsellers-box">
                 <img
                   class="bestsellers-img"
+                  srcset="./images/bestsellers/img-2.jpg 1x, ./images/bestsellers/img-2@2x.jpg 2x"
                   src="./images/bestsellers/img-2.jpg"
                   alt=""
                   width="368"
@@ -487,6 +518,7 @@
               <div class="bestsellers-box">
                 <img
                   class="bestsellers-img"
+                  srcset="./images/bestsellers/img-3.jpg 1x, ./images/bestsellers/img-3@2x.jpg 2x"
                   src="./images/bestsellers/img-3.jpg"
                   alt=""
                   width="368"
@@ -506,9 +538,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Reviews section -->
-      <!-- <section class="reviews section" id="reviews">
+      <section class="reviews section" id="reviews">
         <div class="container">
           <h2 class="reviews-title section-title">
             <span class="section-title-accent">Chocolate</span> is loved
@@ -561,10 +593,10 @@
             >Leave a review</button
           >
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- Footer section -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -650,11 +682,11 @@
               placeholder="Enter your email"
               required
             />
-            <button class="btn btn-accent" type="submit">Subscribe</button>
+            <button class="subscribe-form-btn btn btn-accent" type="submit">Subscribe</button>
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
